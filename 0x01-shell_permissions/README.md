@@ -40,3 +40,18 @@ script that adds execute permission to all subdirectories of the current directo
 mkdir -m 751 my_dir
 creates a directory called my_dir with permissions 751 in the working directory.
 
+chown -R vincent:staff ./*
+changes the owner to vincent and the group owner to staff for all the files and directories in the working directory.
+
+chown -h vincent:staff ./_hello
+script that changes the owner and the group owner of _hello to vincent and staff respectively.
+
+The file _hello is in the working directory
+The file _hello is a symbolic link
+
+
+if [ $(stat -c '%U' hello) = "guillaume" ]; then chown betty hello; fi
+ changes the owner of the file hello to betty only if it is owned by the user guillaume
+
+telnet towel.blinkenlights.nl.
+script that will play the StarWars IV episode in the terminal.
